@@ -1,3 +1,6 @@
+from Usuario_Registrado import *
+
+
 class Maquina:
 	def __init__(self, Id, papel, fecha, hora ):
 		self._setId(Id)
@@ -30,11 +33,13 @@ class Maquina:
 		return self._hora
 
 	def imprimir_factura():
+		print
 
-	def iniciar_estacionamiento():
+	#def iniciar_estacionamiento():
 
-	def finalizar_estacionamiento():
+	#def finalizar_estacionamiento():
 
 	def mostrar_saldo():
-
+		pass
 	def verificar-cuenta():
+		pass

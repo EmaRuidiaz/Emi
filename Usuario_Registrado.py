@@ -1,3 +1,6 @@
+from datetime import datetime
+matricula = []
+
 class UsuarioRegistrado:
 	def __init__(self, patente, saldo, estacionado=false):
 		self._setPatente(patente)
@@ -23,10 +26,20 @@ class UsuarioRegistrado:
 		return self._saldo
 
 	def iniciar_estacionamiento():
-		pass
+		mat = input(' Ingrese la matricula:\t')
+		tiempo = datetime.now()
+		matricula.append(mat)
+		matricula.append(tiempo)
 
 	def finalizar_estacionamiento():
-		pass
+		mat = input(' Ingrese la matricula:\t')
+		if mat in matricula:
+			pos = matricula.index(mat)
+			pos+= 1
+			tiempo = datetime.now()
+			tiem_total= tiempo - matricula[pos]
+			print(tiem_total)
+
 
 	def consultar_saldo():
 		pass
@@ -35,4 +48,11 @@ class UsuarioRegistrado:
 		pass
 
 	def finalizar_sesion():
-		pass
+		salida = 2
+		while salida !=1:
+			opcion=int(input('1. Ingresar Patente: \n 2. Dar de baja: \n'))
+			if opcion == 1:
+				iniciar_estacionamiento()
+			else:
+				finalizar_estacionamiento()
+			salida = int(input('Desea salir   1. Si   2. No'))
