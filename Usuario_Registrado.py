@@ -25,8 +25,12 @@ class UsuarioRegistrado:
 	def _getSaldo(self):
 		return self._saldo
 
+	patente = property(fget = _getPatente, fset = _setPatente)
+	estacionado = property(fget = _getEstacionado, fset = _setEstacionado)
+	saldo = property(fget = _getSaldo, fset = _setSaldo)
+
 	def iniciar_estacionamiento():
-		mat = input(' Ingrese la matricula:\t')
+		self._setPatente = input(' Ingrese la matricula:\t')
 		tiempo = datetime.now()
 		matricula.append(mat)
 		matricula.append(tiempo)
@@ -39,6 +43,10 @@ class UsuarioRegistrado:
 			tiempo = datetime.now()
 			tiem_total= tiempo - matricula[pos]
 			print(tiem_total)
+			print(tiem_total)
+			print('  Patente: ---> ', mat, '        horario de entrada ---> ', matricula[pos])
+			print('                                 horario de salida  ---> ', tiempo)
+			print('                                 tiempo transcurrido --> ', tiem_total)
 
 
 	def consultar_saldo():

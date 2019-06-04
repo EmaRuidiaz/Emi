@@ -31,6 +31,9 @@ class Estacionamiento:
 	def _getDireccion(self):
 		return self._direccion
 
-	def calculo_monto(self, _getHoraEntrada, _getHoraSalida):
+	horaentrada = property(fget = _getHoraEntrada, fset = _setHoraEntrada)
+	horasalida = property(fget = _getHoraSalida, fset = _setHoraSalida)
+	montototal = property(fget = _getMontoTotal, fset = _setMontoTotal)
+	direccion = property(fget = _getDireccion, fset = _setDireccion)
 
-        
+	def calculo_monto(self, _getHoraEntrada, _getHoraSalida):

@@ -28,3 +28,8 @@ class Factura:
 
 	def _getMonto(self):
 		return self._monto
+
+	horaentrada = property(fget = _getHoraEntrada, fset = _setHoraEntrada)
+	horasalida = property(fget = _getHoraSalida, fset = _setHoraSalida)
+	fecha = property(fget = _getFecha, fset = _setFecha)
+	monto = property(fget = _getMonto, fset = _setMonto)

@@ -32,6 +32,11 @@ class Maquina:
 	def _getHora(self):
 		return self._hora
 
+	Id = property(fget= _getId, fset = _setId)
+	papel = property(fget = _getPapel, fset = _setPapel)
+	fecha = property(fget = = _getFecha, fset = _setFecha)
+	hora = property(fget = _getHora, fset = _setHora)
+
 	def imprimir_factura():
 		print
 
