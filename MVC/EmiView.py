@@ -16,7 +16,7 @@ class EmiView:
 		return opcion
 
 	def iniciar_sesion(self):
-		spatente = raw_input("Ingrese su patente: ")
+		patente = input("Ingrese su patente: ")
 		dni = input("Ingrese su dni: ")
 		return patente,dni
 
