@@ -2,6 +2,7 @@ create database Emi;
 use Emi;
 create table usuario(
 	patente varchar(7) primary key,
+    dni varchar(8),
     nombre varchar(50),
     apellido varchar(50),
     saldo decimal(5,2));

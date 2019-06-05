@@ -1,23 +1,25 @@
 import mysql.connector
 
 class DBconn:
-    def __init__(self, db_host="localhost", db_user="root", db_pass="ruidi77", db_name="adventureworks2008r2"):
-		self.db_name = db_name
-		self.db_pass = db_pass
-		self.db_user = db_user
-		self.db_host = db_host
+    def __init__(self, db_host="localhost", db_user="root", db_pass="ruidi77", db_name="Emi"):
+        self.db_name = db_name
+        self.db_pass = db_pass
+        self.db_user = db_user
+        self.db_host = db_host
 
     def conectar(self):
-		self.conexion = mysql.connector.connect(user=self.db_user, password=self.db_pass, host=self.db_host, database=self.db_name)
+        self.conexion = mysql.connector.connect(user=self.db_user, password=self.db_pass, host=self.db_host, database=self.db_name)
+        if self.conexion.is_connected():
+            print("Se conecto")
 
     def abrir_cursor(self):
-		self.cursor = self.conexion.cursor()
+        self.cursor = self.conexion.cursor()
 
     def ejecutar_consulta(self, query, values=""):
-		if values != "":
-			self.cursor.execute(query, values)
-		else:
-			self.cursor.execute(query)
+        if values != "":
+            self.cursor.execute(query, values)
+        else:
+            self.cursor.execute(query)
 
     def send_commit(self, query):
         sql = query.lower()
@@ -41,6 +43,3 @@ class DBconn:
             self.traer_datos()
             self.cerrar_cursor()
             return self.datos
-
-con = DBconn();
-con.ejecutar("Select * from production_product","")

@@ -1,7 +1,7 @@
 class EmiView:
 
 	def __init__(self):
-		pass
+		print("Hola")
 
 	def mostrar_menu(self):
 		menu = """
@@ -16,11 +16,13 @@ class EmiView:
 		return opcion
 
 	def iniciar_sesion(self):
-		patente = input("Ingrese su patente: ")
+		patente = str(input("Ingrese su patente: "))
 		dni = input("Ingrese su dni: ")
-		return patente,dni
+		return (patente,dni)
 
+	def confirmar_ingreso(self):
+		print("Inicio Correcto")
 
+	def datos_incorrectos(self):
+		print("Error! Datos Incorrectos")
 
-x = EmiView()
-x.iniciar_sesion()
