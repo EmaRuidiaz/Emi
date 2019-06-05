@@ -160,7 +160,7 @@ class Maquina:
 
 
 
-class UsuarioRegistrado:
+class Usuario:
 	def __init__(self, patente, saldo, estacionado=false):
 		self._setPatente(patente)
 		self._setEstacionado(estacionado)
