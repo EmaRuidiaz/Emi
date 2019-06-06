@@ -36,7 +36,19 @@ class UsuarioController:
 		print("Datos de la consulta ",datos)
 		if len(datos) != 0:
 			self.user_view.confirmar_ingreso()
-			self.user_view.mostrar_menu()
+			op = self.user_view.mostrar_menu()
+			while op != "4":
+				if op == "1":
+					est = EstacionamientoController()
+					print("Iniciar Estacionamiento")
+				elif op == "2":
+					print("Terminar Estacionamiento")
+				elif op == "3":
+					print("Consultar Saldo")
+				else:
+					break
+				op = self.user_view.mostrar_menu()
+
 		else:
 			self.user_view.datos_incorrectos()
 
