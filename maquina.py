@@ -20,7 +20,7 @@ class Maquina:
 	def _getPapel(self):
 		return self._papel
 
-	def _setFecha(elf, fecha):
+	def _setFecha(self, fecha):
 		self._fecha = fecha
 
 	def _getFecha(self):
