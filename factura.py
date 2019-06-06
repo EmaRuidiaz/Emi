@@ -2,7 +2,7 @@ class Factura:
 	def __init__(self, horaentrada, horasalida, fecha, monto):
 		self._setHoraEntrada(horaentrada)
 		self._setHoraSalida(horasalida)
-		self._setFecha(fehca)
+		self._setFecha(fecha)
 		self._setMonto(monto)
 
 	def _setHoraEntrada(self, horaentrada):
