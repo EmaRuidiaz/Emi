@@ -22,7 +22,7 @@ class EmiView:
 		return (patente,dni)
 
 	def confirmar_ingreso(self):
-		print("Inicio Correcto")
+		print("Bienvenido!")
 
 	def datos_incorrectos(self):
 		print("Error! Datos Incorrectos")
