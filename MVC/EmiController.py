@@ -30,18 +30,14 @@ class UsuarioController:
 		
 
 	def usuario_controller(self):
-        print("hola hola")
-        (self.patente, self.dni) = self.user_view.iniciar_sesion()
-        print(self.patente, "", self.dni)
-        datos = self.user.validar(self.patente, self.dni)
-        print("Datos de la consulta ",datos)
-        if len(datos) != 0:
-            self.user_view.confirmar_ingreso()
-            self.user_view.mostrar_menu()
-        else:
-            self.user_view.datos_incorrectos()
-
-
-		
+		(self.patente, self.dni) = self.user_view.iniciar_sesion()
+		print(self.patente, "", self.dni)
+		datos = self.user.validar(self.patente, self.dni)
+		print("Datos de la consulta ",datos)
+		if len(datos) != 0:
+			self.user_view.confirmar_ingreso()
+			self.user_view.mostrar_menu()
+		else:
+			self.user_view.datos_incorrectos()
 
 persona = UsuarioController()

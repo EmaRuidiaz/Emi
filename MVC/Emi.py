@@ -21,7 +21,7 @@ class Usuario:
 		self.saldo = ""
 		self.db = DBconn()
 
-	def validar(self):
+	def validar(self, patente, dni):
 		query = "Select dni from usuario where patente = %s and dni = %s"
-		values = (self.patente, self.dni)
+		values = (patente, dni)
 		return self.db.ejecutar(query,values)

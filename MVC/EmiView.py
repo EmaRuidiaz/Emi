@@ -1,7 +1,7 @@
 class EmiView:
 
 	def __init__(self):
-		print("Hola")
+		pass
 
 	def mostrar_menu(self):
 		menu = """
@@ -11,7 +11,8 @@ class EmiView:
 			(3) Consultar Saldo
 
 			(4) Salir
-		"""
+
+			Opcion: """
 		opcion = input(menu)
 		return opcion
 
